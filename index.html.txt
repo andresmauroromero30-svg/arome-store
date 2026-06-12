@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AROME</title>
+</head>
+<body>
+
+<h1>AROME</h1>
+
+<p>Perfumes equivalentes inspirados en las fragancias más reconocidas del mundo.</p>
+
+<h2>🔥 3 Perfumes por S/100 🔥</h2>
+
+<p>Próximamente tienda online.</p>
+
+</body>
+</html>
