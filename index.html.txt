@@ -3,17 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AROME</title>
+
+<title>AROME | Perfumes Equivalentes</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#111;
+}
+
+header{
+padding:30px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+width:220px;
+margin-bottom:15px;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#666;
+font-size:18px;
+}
+
+.promo{
+margin-top:25px;
+font-size:28px;
+font-weight:bold;
+}
+
+.search{
+max-width:500px;
+margin:40px auto;
+}
+
+.search input{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+}
+
+.categories{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:50px;
+}
+
+.category{
+padding:15px 30px;
+border:1px solid #111;
+border-radius:8px;
+cursor:pointer;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.product{
+border:1px solid #eee;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.product h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+margin:15px 0;
+}
+
+button{
+background:black;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#777;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<h1>AROME</h1>
+<header>
 
-<p>Perfumes equivalentes inspirados en las fragancias más reconocidas del mundo.</p>
+<img src="images/logo-arome.png" class="logo">
 
-<h2>🔥 3 Perfumes por S/100 🔥</h2>
+<h2>Perfumes Equivalentes Premium</h2>
 
-<p>Próximamente tienda online.</p>
+</header>
+
+<section class="hero">
+
+<h1>Encuentra tu aroma ideal</h1>
+
+<p>Inspirados en las fragancias más reconocidas del mundo.</p>
+
+<div class="promo">
+
+🔥 3 Perfumes por S/100 🔥
+
+</div>
+
+</section>
+
+<div class="search">
+
+<input type="text" placeholder="Buscar perfume...">
+
+</div>
+
+<div class="categories">
+
+<div class="category">👩 Mujer</div>
+
+<div class="category">👨 Hombre</div>
+
+</div>
+
+<section class="products">
+
+<div class="product">
+<h3>La Vie Est Belle</h3>
+<p>Dama</p>
+<div class="price">S/50</div>
+<button>Agregar</button>
+</div>
+
+<div class="product">
+<h3>Good Girl</h3>
+<p>Dama</p>
+<div class="price">S/50</div>
+<button>Agregar</button>
+</div>
+
+<div class="product">
+<h3>Invictus</h3>
+<p>Caballero</p>
+<div class="price">S/50</div>
+<button>Agregar</button>
+</div>
+
+<div class="product">
+<h3>Bleu Chanel</h3>
+<p>Caballero</p>
+<div class="price">S/50</div>
+<button>Agregar</button>
+</div>
+
+</section>
+
+<a class="whatsapp"
+href="https://wa.me/51932667883"
+target="_blank">
+
+WhatsApp
+
+</a>
+
+<footer>
+
+© 2026 AROME
+
+</footer>
 
 </body>
 </html>
