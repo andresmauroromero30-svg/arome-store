@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AROME | Perfumes Equivalentes</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,249 +16,240 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#ffffff;
+background:#f8f8f8;
 color:#111;
 }
 
 header{
-padding:40px 20px;
 text-align:center;
-border-bottom:1px solid #eee;
+padding:30px;
+background:white;
 }
 
 .logo{
-max-width:280px;
+max-width:250px;
 margin-bottom:20px;
 }
 
-h1{
-font-size:42px;
-letter-spacing:4px;
-}
-
-.sub{
-margin-top:10px;
-color:#666;
-}
-
 .promo{
-margin-top:20px;
-font-size:24px;
+font-size:38px;
 font-weight:bold;
+margin-top:15px;
 }
 
-.search{
-max-width:600px;
+.subtitulo{
+font-size:20px;
+color:#666;
+margin-top:10px;
+}
+
+.buscador{
+width:90%;
+max-width:700px;
+display:block;
 margin:30px auto;
-padding:0 20px;
-}
-
-.search input{
-width:100%;
 padding:15px;
-font-size:16px;
+font-size:18px;
 border:1px solid #ccc;
 border-radius:8px;
 }
 
-.section-title{
+.titulo{
 text-align:center;
+font-size:36px;
 margin:40px 0 20px;
-font-size:28px;
 }
 
-.products{
+.catalogo{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 padding:20px;
-max-width:1200px;
+max-width:1400px;
 margin:auto;
 }
 
 .card{
-border:1px solid #eee;
+background:white;
+border-radius:12px;
 padding:20px;
-border-radius:10px;
 text-align:center;
-transition:.3s;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.card:hover{
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+.codigo{
+font-size:13px;
+color:#888;
+margin-bottom:8px;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:contain;
+margin-bottom:15px;
 }
 
 .card h3{
+font-size:24px;
 margin-bottom:10px;
 }
 
-.price{
-font-size:20px;
+.precio{
+font-size:30px;
 font-weight:bold;
-margin:10px 0;
+margin:15px 0;
 }
 
-button{
+.btn{
 background:black;
 color:white;
 border:none;
-padding:12px 20px;
+padding:12px 25px;
+border-radius:8px;
 cursor:pointer;
-border-radius:6px;
 }
 
-button:hover{
-opacity:.9;
-}
-
-.cart{
+.carrito{
 position:fixed;
 right:20px;
 bottom:20px;
-background:white;
-border:1px solid #ddd;
-padding:20px;
 width:300px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
-.cart h3{
+.carrito h2{
 margin-bottom:10px;
 }
 
-.cart ul{
-padding-left:20px;
-margin-bottom:10px;
-}
-
-.cart input{
+.carrito input{
 width:100%;
 padding:10px;
-margin:5px 0;
+margin-bottom:10px;
 }
 
 .whatsapp{
-background:#25D366;
 width:100%;
-margin-top:10px;
+padding:15px;
+background:#25D366;
+color:white;
+border:none;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
 }
+
 </style>
 </head>
-
 <body>
 
 <header>
 
+<!-- CAMBIA ESTA RUTA POR TU LOGO -->
+<img src="images/logo-arome.png" class="logo">
+
 <h1>AROME</h1>
 
-<p class="sub">
+<p class="subtitulo">
 Perfumes Equivalentes Premium 50ml
 </p>
 
-<p class="promo">
+<div class="promo">
 🔥 3 Perfumes por S/100 🔥
-</p>
+</div>
 
 </header>
 
-<div class="search">
-<input type="text" id="buscar" placeholder="Buscar perfume...">
-</div>
+<input
+type="text"
+class="buscador"
+placeholder="Buscar perfume..."
+id="buscador"
+onkeyup="buscarPerfume()">
 
-<h2 class="section-title">Perfumes Destacados</h2>
+<h2 class="titulo">Perfumes Destacados</h2>
 
-<div class="products" id="productos">
+<div class="catalogo" id="catalogo">
 
 <div class="card">
+<div class="codigo">CC073</div>
+<img src="images/invictus.jpg">
 <h3>Invictus</h3>
 <p>Marino • Cítrico • Aromático</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Invictus')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('Invictus')">Agregar</button>
 </div>
 
 <div class="card">
+<div class="codigo">CC047</div>
+<img src="images/eros.jpg">
 <h3>Eros</h3>
 <p>Vainilla • Verde • Aromático</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Eros')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('Eros')">Agregar</button>
 </div>
 
 <div class="card">
+<div class="codigo">CC097</div>
+<img src="images/onemillion.jpg">
 <h3>One Million</h3>
 <p>Cálido • Especiado</p>
-<p class="price">S/50</p>
-<button onclick="agregar('One Million')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('One Million')">Agregar</button>
 </div>
 
 <div class="card">
+<div class="codigo">CC008</div>
+<img src="images/acquadigio.jpg">
 <h3>Acqua Di Gio</h3>
 <p>Cítrico • Marino</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Acqua Di Gio')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('Acqua Di Gio')">Agregar</button>
 </div>
 
 <div class="card">
-<h3>Bleu Chanel</h3>
-<p>Cítrico • Balsámico</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Bleu Chanel')">Agregar</button>
-</div>
-
-<div class="card">
-<h3>Bad Boy</h3>
-<p>Especiado • Tonka</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Bad Boy')">Agregar</button>
-</div>
-
-<div class="card">
+<div class="codigo">DD065</div>
+<img src="images/goodgirl.jpg">
 <h3>Good Girl</h3>
 <p>Oriental Floral</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Good Girl')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('Good Girl')">Agregar</button>
 </div>
 
 <div class="card">
-<h3>La Vie Est Belle</h3>
-<p>Dulce Floral</p>
-<p class="price">S/50</p>
-<button onclick="agregar('La Vie Est Belle')">Agregar</button>
-</div>
-
-<div class="card">
+<div class="codigo">DD096</div>
+<img src="images/libre.jpg">
 <h3>Libre</h3>
 <p>Lavanda • Floral</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Libre')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('Libre')">Agregar</button>
 </div>
 
 <div class="card">
+<div class="codigo">DD057</div>
+<img src="images/scandal.jpg">
 <h3>Scandal</h3>
 <p>Dulce • Caramelo</p>
-<p class="price">S/50</p>
-<button onclick="agregar('Scandal')">Agregar</button>
+<div class="precio">S/50</div>
+<button class="btn" onclick="agregar('Scandal')">Agregar</button>
 </div>
 
 </div>
 
-<div class="cart">
+<div class="carrito">
 
-<h3>Carrito</h3>
+<h2>Carrito</h2>
 
-<ul id="lista"></ul>
+<p>Total: S/<span id="total">0</span></p>
 
-<p id="total">
-Total: S/0
-</p>
+<input type="text" id="nombre" placeholder="Nombre">
+<input type="text" id="celular" placeholder="Celular">
+<input type="text" id="distrito" placeholder="Distrito">
 
-<input id="nombre" placeholder="Nombre">
-
-<input id="celular" placeholder="Celular">
-
-<input id="distrito" placeholder="Distrito">
-
-<button class="whatsapp" onclick="enviarWhatsapp()">
+<button class="whatsapp" onclick="comprar()">
 Comprar por WhatsApp
 </button>
 
@@ -265,74 +258,46 @@ Comprar por WhatsApp
 <script>
 
 let carrito=[];
+let total=0;
 
 function agregar(nombre){
 
 carrito.push(nombre);
 
-render();
-}
-
-function render(){
-
-let lista=document.getElementById("lista");
-
-lista.innerHTML="";
-
-carrito.forEach(item=>{
-
-lista.innerHTML += `<li>${item}</li>`;
-
-});
-
-let total=0;
-
 if(carrito.length>=3){
-
-let grupos=Math.floor(carrito.length/3);
-
-let resto=carrito.length%3;
-
-total=(grupos*100)+(resto*50);
-
+total=100;
 }else{
-
 total=carrito.length*50;
-
 }
 
-document.getElementById("total").innerHTML=
-"Total: S/"+total;
-
+document.getElementById("total").innerText=total;
 }
 
-function enviarWhatsapp(){
+function comprar(){
 
 let nombre=document.getElementById("nombre").value;
 let celular=document.getElementById("celular").value;
 let distrito=document.getElementById("distrito").value;
 
-let total=document.getElementById("total").innerText;
-
 let mensaje=
-`Hola AROME%0A%0A`+
-`Nombre: ${nombre}%0A`+
-`Celular: ${celular}%0A`+
-`Distrito: ${distrito}%0A%0A`+
-`Perfumes:%0A${carrito.join('%0A')}%0A%0A`+
-`${total}`;
+"AROME%0A%0A"+
+"Cliente: "+nombre+"%0A"+
+"Celular: "+celular+"%0A"+
+"Distrito: "+distrito+"%0A%0A"+
+"Perfumes:%0A"+
+carrito.join("%0A")+
+"%0A%0ATotal: S/"+total;
 
 window.open(
-`https://wa.me/51932667883?text=${mensaje}`,
-'_blank'
+"https://wa.me/51932667883?text="+mensaje,
+"_blank"
 );
 
 }
 
-document.getElementById("buscar")
-.addEventListener("keyup",function(){
+function buscarPerfume(){
 
-let filtro=this.value.toLowerCase();
+let input=document.getElementById("buscador").value.toLowerCase();
 
 let cards=document.querySelectorAll(".card");
 
@@ -341,12 +306,18 @@ cards.forEach(card=>{
 let texto=card.innerText.toLowerCase();
 
 card.style.display=
-texto.includes(filtro)
+texto.includes(input)
 ? "block"
 : "none";
 
 });
 
+}
+
+</script>
+
+</body>
+</html>
 });
 
 </script>
